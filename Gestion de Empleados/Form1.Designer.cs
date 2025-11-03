@@ -34,11 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lstEmpleados = new System.Windows.Forms.ListBox();
-            this.btnCargarEmpleado = new System.Windows.Forms.Button();
+            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             this.cmbTipoEmpleado = new System.Windows.Forms.ComboBox();
             this.txtbHorasExtra = new System.Windows.Forms.TextBox();
             this.txtbSalarioBase = new System.Windows.Forms.TextBox();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
+            this.btnMostrarEmpleados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblGestionEmpleados
@@ -102,17 +103,17 @@
             this.lstEmpleados.Size = new System.Drawing.Size(276, 172);
             this.lstEmpleados.TabIndex = 5;
             // 
-            // btnCargarEmpleado
+            // btnAgregarEmpleado
             // 
-            this.btnCargarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCargarEmpleado.Font = new System.Drawing.Font("HP Simplified", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarEmpleado.Location = new System.Drawing.Point(325, 404);
-            this.btnCargarEmpleado.Name = "btnCargarEmpleado";
-            this.btnCargarEmpleado.Size = new System.Drawing.Size(164, 34);
-            this.btnCargarEmpleado.TabIndex = 6;
-            this.btnCargarEmpleado.Text = "Cargar empleado";
-            this.btnCargarEmpleado.UseVisualStyleBackColor = true;
-            this.btnCargarEmpleado.Click += new System.EventHandler(this.btnCargarEmpleado_Click);
+            this.btnAgregarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAgregarEmpleado.Font = new System.Drawing.Font("HP Simplified", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEmpleado.Location = new System.Drawing.Point(208, 404);
+            this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(164, 34);
+            this.btnAgregarEmpleado.TabIndex = 6;
+            this.btnAgregarEmpleado.Text = "Agregar empleado";
+            this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnCargarEmpleado_Click);
             // 
             // cmbTipoEmpleado
             // 
@@ -131,6 +132,8 @@
             this.txtbHorasExtra.Name = "txtbHorasExtra";
             this.txtbHorasExtra.Size = new System.Drawing.Size(127, 23);
             this.txtbHorasExtra.TabIndex = 8;
+            this.txtbHorasExtra.TextChanged += new System.EventHandler(this.txtbHorasExtra_TextChanged);
+            this.txtbHorasExtra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbHorasExtra_KeyPress);
             // 
             // txtbSalarioBase
             // 
@@ -139,6 +142,8 @@
             this.txtbSalarioBase.Name = "txtbSalarioBase";
             this.txtbSalarioBase.Size = new System.Drawing.Size(127, 23);
             this.txtbSalarioBase.TabIndex = 9;
+            this.txtbSalarioBase.TextChanged += new System.EventHandler(this.txtbSalarioBase_TextChanged);
+            this.txtbSalarioBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbSalarioBase_KeyPress);
             // 
             // txtNombreEmpleado
             // 
@@ -148,16 +153,28 @@
             this.txtNombreEmpleado.Size = new System.Drawing.Size(127, 23);
             this.txtNombreEmpleado.TabIndex = 10;
             // 
+            // btnMostrarEmpleados
+            // 
+            this.btnMostrarEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnMostrarEmpleados.Font = new System.Drawing.Font("HP Simplified", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarEmpleados.Location = new System.Drawing.Point(398, 404);
+            this.btnMostrarEmpleados.Name = "btnMostrarEmpleados";
+            this.btnMostrarEmpleados.Size = new System.Drawing.Size(164, 34);
+            this.btnMostrarEmpleados.TabIndex = 11;
+            this.btnMostrarEmpleados.Text = "Mostrar empleados";
+            this.btnMostrarEmpleados.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMostrarEmpleados);
             this.Controls.Add(this.txtNombreEmpleado);
             this.Controls.Add(this.txtbSalarioBase);
             this.Controls.Add(this.txtbHorasExtra);
             this.Controls.Add(this.cmbTipoEmpleado);
-            this.Controls.Add(this.btnCargarEmpleado);
+            this.Controls.Add(this.btnAgregarEmpleado);
             this.Controls.Add(this.lstEmpleados);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,11 +197,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lstEmpleados;
-        private System.Windows.Forms.Button btnCargarEmpleado;
+        private System.Windows.Forms.Button btnAgregarEmpleado;
         private System.Windows.Forms.ComboBox cmbTipoEmpleado;
         private System.Windows.Forms.TextBox txtbHorasExtra;
         private System.Windows.Forms.TextBox txtbSalarioBase;
         private System.Windows.Forms.TextBox txtNombreEmpleado;
+        private System.Windows.Forms.Button btnMostrarEmpleados;
     }
 }
 
