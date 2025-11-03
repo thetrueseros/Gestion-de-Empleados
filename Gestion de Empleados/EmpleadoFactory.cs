@@ -16,9 +16,9 @@ namespace Gestion_de_Empleados
                 switch (tipo)
                 {
                     case "Gerente":
-                        return new Gerente(salarioBase, extra);
+                        return new Gerente(nombre, tipo, salarioBase, extra);
                     case "Programador":
-                        return new Programador(salarioBase, extra);
+                        return new Programador(nombre, tipo, salarioBase, extra);
                     default:
                         throw new ArgumentException("Tipo de empleado no reconocido.");
                 }

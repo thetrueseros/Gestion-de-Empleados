@@ -10,9 +10,10 @@ namespace Gestion_de_Empleados
     public class Programador : Empleado
     {
         public double HorasExtra { get; set; }
-        public Programador(double salarioBase, double horasExtra)
+        public Programador(double salarioBase, string tipo, double horasExtra)
         {
             SalarioBase = salarioBase;
+            this.tipo = tipo;
             HorasExtra = horasExtra;
         }
         public override double CalcularSalario()
