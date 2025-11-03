@@ -10,7 +10,7 @@ namespace Gestion_de_Empleados
     {
         public string nombre { get; set; }
         public string tipo { get; set; }
-        public double SalarioBase { get; set; }
+        public double salarioBase { get; set; }
         /// <summary>
         /// Método double que calcula el salario total del empleado.
         /// </summary>
