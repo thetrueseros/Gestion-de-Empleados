@@ -37,7 +37,7 @@ namespace Gestion_de_Empleados
         }
 
 
-        private void btnCargarEmpleado_Click(object sender, EventArgs e)
+        private void btnAgregarEmpleado_Click(object sender, EventArgs e)
         {
             try
             {
@@ -64,11 +64,10 @@ namespace Gestion_de_Empleados
                 MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            string nombre = txtNombreEmpleado.Text;
-            double salario = double.Parse(txtbSalarioBase.Text);
-            double extras = double.Parse(txtbHorasExtra.Text);
-            string tipoEmpleado = cmbTipoEmpleado.SelectedItem.ToString();
+            Empleado empleado = EmpleadoFactory.CrearEmpleado(cmbTipoEmpleado.SelectedItem.ToString(), ///tipo empleado
+                txtNombreEmpleado.Text, ///nombre
+                double.Parse(txtbSalarioBase.Text), ///salario base
+                double.Parse(txtbHorasExtra.Text)); ///extras
         }
 
         private void txtbSalarioBase_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,6 +94,11 @@ namespace Gestion_de_Empleados
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnMostrarEmpleados_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

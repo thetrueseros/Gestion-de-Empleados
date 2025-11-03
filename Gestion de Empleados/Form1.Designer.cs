@@ -113,7 +113,7 @@
             this.btnAgregarEmpleado.TabIndex = 6;
             this.btnAgregarEmpleado.Text = "Agregar empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
-            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnCargarEmpleado_Click);
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // cmbTipoEmpleado
             // 
@@ -163,6 +163,7 @@
             this.btnMostrarEmpleados.TabIndex = 11;
             this.btnMostrarEmpleados.Text = "Mostrar empleados";
             this.btnMostrarEmpleados.UseVisualStyleBackColor = true;
+            this.btnMostrarEmpleados.Click += new System.EventHandler(this.btnMostrarEmpleados_Click);
             // 
             // Form1
             // 

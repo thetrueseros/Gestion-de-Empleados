@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoFactory.cs" />
+    <Compile Include="EmpleadoRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
