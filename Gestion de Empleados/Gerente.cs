@@ -10,8 +10,9 @@ namespace Gestion_de_Empleados
     public class Gerente : Empleado
     {
         public double Bonificacion { get; set; }
-        public Gerente(double salarioBase,string tipo, double bonificacion)
+        public Gerente(string nombre, double salarioBase,string tipo, double bonificacion)
         {
+            this.nombre = nombre;
             SalarioBase = salarioBase;
             this.tipo = tipo;
             Bonificacion = bonificacion;
