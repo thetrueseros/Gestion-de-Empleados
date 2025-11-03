@@ -8,21 +8,20 @@ namespace Gestion_de_Empleados
 {
     public class EmpleadoFactory
     {
-        public void CrearEmpleado(string tipo, double salarioBase, double adicional)
+        public void CrearEmpleado(string tipo, string nombre, double salarioBase, double extra)
         {
             Empleado empleado = null;
             switch (tipo.ToLower())
             {
-                case "gerente":
-                    empleado = new Gerente(salarioBase, adicional);
+                case "Gerente":
+                    empleado = new Gerente(salarioBase, extra);
                     break;
-                case "programador":
-                    empleado = new Programador(salarioBase, adicional);
+                case "Programador":
+                    empleado = new Programador(salarioBase, extra);
                     break;
                 default:
                     throw new ArgumentException("Tipo de empleado no reconocido.");
             }
-            Console.WriteLine($"Salario total del {tipo}: {empleado.CalcularSalario()}");
         }
     }
 }
