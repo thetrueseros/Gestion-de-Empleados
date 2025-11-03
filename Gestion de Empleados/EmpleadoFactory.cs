@@ -9,19 +9,16 @@ namespace Gestion_de_Empleados
 {
     public class EmpleadoFactory
     {
-        public void CrearEmpleado(string tipo, string nombre, double salarioBase, double extra)
+        public static Empleado CrearEmpleado(string tipo, string nombre, double salarioBase, double extra)
         {
-            Empleado empleado = null;
             try
             {
                 switch (tipo)
                 {
                     case "Gerente":
-                        empleado = new Gerente(salarioBase, extra);
-                        break;
+                        return new Gerente(salarioBase, extra);
                     case "Programador":
-                        empleado = new Programador(salarioBase, extra);
-                        break;
+                        return new Programador(salarioBase, extra);
                     default:
                         throw new ArgumentException("Tipo de empleado no reconocido.");
                 }
@@ -29,8 +26,7 @@ namespace Gestion_de_Empleados
             catch (ArgumentException ex)
             {
                 MessageBox.Show("Error al crear el empleado: " + ex.Message, "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
+                return null;
             }
         }
     }
