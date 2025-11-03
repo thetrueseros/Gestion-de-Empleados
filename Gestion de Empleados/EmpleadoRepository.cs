@@ -11,6 +11,11 @@ public class EmpleadoRepository
 
     private EmpleadoRepository()
     {
+        if (!File.Exists(rutaArchivo))
+        {
+            File.Create(rutaArchivo).Close();
+        }
+        ObtenerLineasEmpleados();
     }
     public static EmpleadoRepository Instancia
     {
