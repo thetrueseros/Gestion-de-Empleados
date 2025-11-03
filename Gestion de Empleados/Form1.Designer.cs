@@ -95,12 +95,13 @@
             // 
             // lstEmpleados
             // 
+            this.lstEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lstEmpleados.Font = new System.Drawing.Font("HP Simplified", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstEmpleados.FormattingEnabled = true;
             this.lstEmpleados.ItemHeight = 21;
-            this.lstEmpleados.Location = new System.Drawing.Point(429, 127);
+            this.lstEmpleados.Location = new System.Drawing.Point(376, 127);
             this.lstEmpleados.Name = "lstEmpleados";
-            this.lstEmpleados.Size = new System.Drawing.Size(276, 172);
+            this.lstEmpleados.Size = new System.Drawing.Size(412, 193);
             this.lstEmpleados.TabIndex = 5;
             // 
             // btnAgregarEmpleado
