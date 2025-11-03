@@ -51,7 +51,7 @@ namespace Gestion_de_Empleados
                 }
                 if (double.Parse(txtbHorasExtra.Text) < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Las horas extra no pueden ser negativas.");
+                    throw new ArgumentOutOfRangeException("Las horas extra/bonificaciones no pueden ser negativas.");
                 }
             }
             catch (ArgumentNullException ex)
