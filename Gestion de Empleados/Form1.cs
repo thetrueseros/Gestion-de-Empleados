@@ -98,7 +98,10 @@ namespace Gestion_de_Empleados
 
         private void btnMostrarEmpleados_Click(object sender, EventArgs e)
         {
-
+            lstEmpleados.Items.Clear();
+            EmpleadoRepository.instancia.MostrarEmpleadosEnListBox(lstEmpleados);
         }
+
     }
 }
+

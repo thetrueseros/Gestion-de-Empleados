@@ -4,15 +4,13 @@ using System.IO;
 using System.Windows.Forms;
 public class EmpleadoRepository
 {
-    private static EmpleadoRepository instancia;
+    public static EmpleadoRepository instancia;
     private List<Empleado> empleados = new List<Empleado>();
     private readonly string rutaArchivo = "empleados.txt";
 
     private EmpleadoRepository()
     {
-        MostrarEmpleadosEnListBox();
     }
-
     public static EmpleadoRepository Instancia
     {
         ///Crea instancia si no la hay
@@ -58,7 +56,6 @@ public class EmpleadoRepository
     public void MostrarEmpleadosEnListBox(ListBox lstEmpleados)
     {
         lstEmpleados.Items.Clear();
-
         if (File.Exists("empleados.txt"))
         {
             var lineas = File.ReadAllLines("empleados.txt");
