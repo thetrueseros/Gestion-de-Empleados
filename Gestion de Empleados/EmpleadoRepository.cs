@@ -53,7 +53,7 @@ public class EmpleadoRepository
         using (StreamWriter sw = new StreamWriter(rutaArchivo))
         {
             foreach (var e in empleados)
-                sw.WriteLine(e.nombre.ToString(), e.tipo, e.CalcularSalario()); // Formato texto plano
+                sw.WriteLine("Nombre: " + e.nombre.ToString() +", Tipo: " + e.tipo + ", Salario final: " + e.CalcularSalario()); // Formato texto plano
         }
     }
     /// <summary>

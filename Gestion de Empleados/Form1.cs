@@ -68,6 +68,7 @@ namespace Gestion_de_Empleados
                 txtNombreEmpleado.Text, ///nombre
                 double.Parse(txtbSalarioBase.Text), ///salario base
                 double.Parse(txtbHorasExtra.Text)); ///extras
+            EmpleadoRepository.Instancia.Agregar(empleado);
         }
 
         private void txtbSalarioBase_KeyPress(object sender, KeyPressEventArgs e)
@@ -98,6 +99,7 @@ namespace Gestion_de_Empleados
 
         private void btnMostrarEmpleados_Click(object sender, EventArgs e)
         {
+            lstEmpleados.Items.Clear();
             foreach (string linea in EmpleadoRepository.Instancia.ObtenerLineasEmpleados())
             {
                 lstEmpleados.Items.Add(linea);
