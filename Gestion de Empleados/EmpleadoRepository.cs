@@ -1,6 +1,7 @@
 ﻿using Gestion_de_Empleados;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 public class EmpleadoRepository
 {
@@ -53,17 +54,12 @@ public class EmpleadoRepository
     /// <summary>
     /// Carga los empleados desde txt
     /// </summary>
-    public void MostrarEmpleadosEnListBox(ListBox lstEmpleados)
+    public List<string> ObtenerLineasEmpleados()
     {
-        lstEmpleados.Items.Clear();
-        if (File.Exists("empleados.txt"))
+        if (File.Exists(rutaArchivo))
         {
-            var lineas = File.ReadAllLines("empleados.txt");
-            foreach (var linea in lineas)
-            {
-                lstEmpleados.Items.Add(linea);
-            }
+            return File.ReadAllLines(rutaArchivo).ToList();
         }
+        return new List<string>();
     }
-
 }
